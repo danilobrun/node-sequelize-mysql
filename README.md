@@ -1,1 +1,1 @@
-# node-squelize-mysql
+# node-sequelize-mysql
