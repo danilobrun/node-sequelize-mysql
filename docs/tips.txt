@@ -1,0 +1,21 @@
+macbook
+banco mysql
+user: root
+pass: danilo@90
+
+Para add uma nova coluna na tabela via sequelize exemplo deleadAt: type Data e aceita NULL
+1 - criar uma nova migrate 20220922-deleteAt-pessoas.js troca os params pela sua tabela
+"use strict";
+module.exports = {
+  async up(queryInterface, Sequelize) {
+    await queryInterface.addColumn("Pessoas", "deletedAt", {
+      allowNull: true,
+      type: Sequelize.DATE
+    });
+  },
+  async down(queryInterface, Sequelize) {
+    await queryInterface.remveColumn("Pessoas");
+  }
+};
+
+
